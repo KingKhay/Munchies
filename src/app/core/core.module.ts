@@ -1,23 +1,27 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {HeaderComponent} from './components/header/header.component';
 import {RouterModule} from "@angular/router";
-import {MatIconModule} from "@angular/material/icon";
-
+import { HeroComponent } from './components/hero/hero.component';
+import {MaterialModule} from "../material/material.module";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
+    HeroComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
-    MatIconModule,
+    NgOptimizedImage,
+    MaterialModule,
+    HttpClientModule
   ],
   exports: [
     HeaderComponent,
-    MatIconModule,
+    HeroComponent,
   ]
 })
 export class CoreModule {
