@@ -5,12 +5,16 @@ import {RouterModule} from "@angular/router";
 import { HeroComponent } from './components/hero/hero.component';
 import {MaterialModule} from "../material/material.module";
 import {HttpClientModule} from "@angular/common/http";
+import { FoodCardComponent } from './components/food-card/food-card.component';
+import { ErrorComponent } from './components/error/error.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     HeroComponent,
+    FoodCardComponent,
+    ErrorComponent,
   ],
   imports: [
     CommonModule,
