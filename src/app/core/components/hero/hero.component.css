@@ -1,3 +1,8 @@
-.odd{
-  transform: translateY(-100px);
+@media screen and (min-width: 768px) {
+  .odd{
+    transform: translateY(-100px);
+  }
 }
+
+
+
