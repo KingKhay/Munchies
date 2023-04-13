@@ -1,3 +1,9 @@
 .error-svg{
   transform: scale(30);
 }
+
+@media screen and (max-width: 768px) {
+  .error-svg{
+    transform: scale(20);
+  }
+}

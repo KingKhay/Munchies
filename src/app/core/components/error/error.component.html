@@ -1,9 +1,9 @@
-<div class="flex flex-row justify-around items-center h-96 w-full mt-20">
+<div class="max-md:flex-col flex flex-row justify-around items-center h-96 w-full mt-20">
   <div>
-    <mat-icon class="error-svg" svgIcon="error"></mat-icon>
+    <mat-icon class="error-svg mt-10" svgIcon="error"></mat-icon>
   </div>
-  <div>
-    <p class="font-bold text-3xl text-error-deep-blue">Sorry, we were unable to find that page</p>
-    <a href="#" routerLink="/" class="p-5 mt-5 bg-error-deep-blue inline-block rounded-xl text-white">Go To Home</a>
+  <div class="max-md:flex flex-col">
+    <p class="max-md:mt-32 max-md:text-xl font-bold text-3xl text-error-deep-blue">Sorry, we were unable to find that page</p>
+    <a href="#" routerLink="/" class="max-md:p-2 max-md:text-center p-5 mt-5 bg-error-deep-blue inline-block rounded-xl text-white">Go To Home</a>
   </div>
 </div>
