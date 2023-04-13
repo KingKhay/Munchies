@@ -1,9 +1,12 @@
-<div>
-  <div>
-    <img ngSrc="assets/images/bowl1.jpg" height="300" width="300" alt="burger">
+<div class="flex flex-col justify-center mx-7 my-10 rounded-xl overflow-hidden h-64">
+  <div class="h-48">
+    <img ngSrc="{{data.image}}" height="200" width="200" alt="{{data.name}}" priority>
   </div>
-  <div>
-    <p>Burger</p>
-    <p>23$</p>
+  <div class="flex items-center justify-between mt-3 font-bold">
+    <p>{{data.name}}</p>
+    <p>{{data.price | currency}}</p>
+  </div>
+  <div class="self-end mt-5">
+    <a href="#" routerLink="/add-to-cart"><mat-icon>add_shopping_cart</mat-icon></a>
   </div>
 </div>

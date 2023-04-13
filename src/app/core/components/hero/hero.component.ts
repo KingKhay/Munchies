@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
+import {CardData} from "../food-card/food-card.component";
+import {FoodService} from "../../services/food.service";
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css']
 })
-export class HeroComponent {
-  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
+export class HeroComponent implements  OnInit{
+  constructor(
+    private iconRegistry: MatIconRegistry,
+    private sanitizer: DomSanitizer,
+    private foodService: FoodService) {
 
     this.iconRegistry.addSvgIcon(
       "facebook", this.sanitizer.bypassSecurityTrustResourceUrl("../assets/images/icons8-facebook.svg"));
@@ -17,5 +22,11 @@ export class HeroComponent {
     this.iconRegistry.addSvgIcon(
       "whatsapp", this.sanitizer.bypassSecurityTrustResourceUrl("../assets/images/icons8-whatsapp.svg"));
 
+  }
+
+  data: CardData[] = [];
+  colors: string[] = ['lightgreen','golden-yellow','purple-blue'];
+  ngOnInit(): void {
+    this.data = this.foodService.getFoodData();
   }
 }
