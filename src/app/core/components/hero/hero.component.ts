@@ -10,10 +10,14 @@ import {FoodService} from "../../services/food.service";
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements  OnInit{
+
+  data!: CardData[];
   constructor(
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer,
     private foodService: FoodService) {
+
+    this.data = [];
 
     this.iconRegistry.addSvgIcon(
       "facebook", this.sanitizer.bypassSecurityTrustResourceUrl("../assets/images/icons8-facebook.svg"));
@@ -24,9 +28,10 @@ export class HeroComponent implements  OnInit{
 
   }
 
-  data: CardData[] = [];
+
   colors: string[] = ['lightgreen','golden-yellow','purple-blue'];
   ngOnInit(): void {
     this.data = this.foodService.getFoodData();
+    console.log(this.data)
   }
 }
