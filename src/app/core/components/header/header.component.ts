@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   itemsInCart = 0;
+
+  isSmallScreen = window.innerWidth <= 768;
+  isLargeScreen = window.innerWidth >= 768;
+  isMenuOpened = false;
   constructor() {
     //
   }
