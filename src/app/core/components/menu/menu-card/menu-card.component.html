@@ -1,1 +1,17 @@
-<p>menu-card works!</p>
+<div class="flex flex-col items-center mx-5 my-10 rounded-xl overflow-hidden">
+  <div>
+    <img ngSrc="{{food.imageUrl}}" width="200" height="200" alt="food image" priority>
+  </div>
+  <div>
+    <div>
+      <p>{{food.name}}</p>
+      <div class="mx-5">
+        <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="24px" [readonly]="true"></star-rating>
+      </div>
+    </div>
+    <div>
+      <span>{{food.price | currency}}</span>
+      <a href="#" routerLink="/cart">Add to Cart</a>
+    </div>
+  </div>
+</div>
