@@ -16,7 +16,7 @@ export class FoodService {
         name: 'Congee',
         price: 34,
         tags: ['Veggies','FastFood'],
-        favorite: false,
+        favorite: true,
         cookTime: '10 mins',
         imageUrl: 'assets/images/menu1.jpg',
         stars: 4
@@ -36,7 +36,7 @@ export class FoodService {
         name: 'Mi Xian',
         price: 25,
         tags: ['Noodles','FastFood'],
-        favorite: false,
+        favorite: true,
         cookTime: '15 mins',
         imageUrl: 'assets/images/menu3.jpg',
         stars: 4
@@ -76,7 +76,7 @@ export class FoodService {
         name: 'Yin Zhen Fen',
         price: 23,
         tags: ['Veggies','FastFood'],
-        favorite: false,
+        favorite: true,
         cookTime: '10 mins',
         imageUrl: 'assets/images/menu7.jpg',
         stars: 2

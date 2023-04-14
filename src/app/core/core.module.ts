@@ -9,27 +9,31 @@ import { FoodCardComponent } from './components/food-card/food-card.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuCardComponent } from './components/menu/menu-card/menu-card.component';
+import {RatingModule} from "ng-starrating";
 
+const components = [
+  HeaderComponent,
+  HeroComponent,
+  FoodCardComponent,
+  ErrorComponent,
+  MenuComponent,
+  MenuCardComponent,
+];
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    HeroComponent,
-    FoodCardComponent,
-    ErrorComponent,
-    MenuComponent,
-    MenuCardComponent,
+    components
   ],
   imports: [
     CommonModule,
     RouterModule,
     NgOptimizedImage,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    RatingModule,
   ],
   exports: [
-    HeaderComponent,
-    HeroComponent,
+    components
   ]
 })
 export class CoreModule {

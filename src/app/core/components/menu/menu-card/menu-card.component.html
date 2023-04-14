@@ -1,17 +1,19 @@
-<div class="flex flex-col items-center mx-5 my-10 rounded-xl overflow-hidden">
+<div class="flex flex-col mx-5 my-10 rounded-xl overflow-hidden border h-96 min-h-fit w-80">
   <div>
-    <img ngSrc="{{food.imageUrl}}" width="200" height="200" alt="food image" priority>
+    <img ngSrc="{{food.imageUrl}}" width="340" height="340" alt="food image" priority>
   </div>
-  <div>
-    <div>
-      <p>{{food.name}}</p>
-      <div class="mx-5">
-        <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="24px" [readonly]="true"></star-rating>
-      </div>
+  <div class="flex-col justify-center items-center w-full">
+    <div class="flex items-center justify-between w-full mx-2 my-4">
+      <span class="font-light text-xl">{{food.name}}</span>
+      <span class="mr-3 {{food?.favorite ? 'text-red-600' : 'text-gray-400'}}"><mat-icon>favorite</mat-icon></span>
     </div>
-    <div>
-      <span>{{food.price | currency}}</span>
-      <a href="#" routerLink="/cart">Add to Cart</a>
+    <div class="w-full flex justify-between items-center mx-2 mb-4">
+      <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="gold" uncheckedcolor="gray" size="24px" [readonly]="true"></star-rating>
+      <p class="mr-4">🕓: {{food.cookTime}}</p>
+    </div>
+    <div class="w-full flex items-center gap-x-40">
+      <span class="ml-2">{{food.price | currency}}</span>
+      <a class="p-2 bg-golden-yellow text-white rounded hover:bg-yellow-400 transition duration-300" href="#" routerLink="/cart">Add to Cart</a>
     </div>
   </div>
 </div>
