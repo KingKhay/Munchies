@@ -21,6 +21,7 @@ export class MenuComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    //Mimicking http call
     setTimeout(() => {
       this.foodData = this.foodService.getMenuOfFood()
       this.isLoading = false;
