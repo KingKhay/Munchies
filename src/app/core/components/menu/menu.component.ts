@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FoodService} from "../../services/food.service";
 import {Food} from "../../../shared/models/Food";
+import {MatIconRegistry} from "@angular/material/icon";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-menu',
@@ -9,12 +11,20 @@ import {Food} from "../../../shared/models/Food";
 })
 export class MenuComponent implements OnInit {
 
-  foodData!: Food[];
-  constructor(private foodService: FoodService) {
+  foodData: Food[] = [];
+
+  isLoading = true;
+  constructor(private foodService: FoodService,
+              private matIconRegistry: MatIconRegistry,
+              private domSanitizer: DomSanitizer) {
+    this.matIconRegistry.addSvgIcon('spinner', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/spinner.svg'));
 
   }
   ngOnInit(): void {
-    this.foodData = this.foodService.getMenuOfFood();
+    setTimeout(() => {
+      this.foodData = this.foodService.getMenuOfFood()
+      this.isLoading = false;
+    },1000)
   }
 
 }

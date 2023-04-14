@@ -1,4 +1,6 @@
-<div class="mt-10 flex flex-row justify-center items-center flex-wrap ">
-  <app-menu-card [food]="food" *ngFor="let food of foodData"></app-menu-card>
+<div class="flex flex-row items-center justify-center w-full">
+  <mat-icon *ngIf="isLoading" class="scale-[10] md:mt-52" svgIcon="spinner"></mat-icon>
+  <div *ngIf="!isLoading" class="mt-10 flex flex-row justify-center items-center flex-wrap">
+    <app-menu-card [food]="food" *ngFor="let food of foodData"></app-menu-card>
+  </div>
 </div>
-

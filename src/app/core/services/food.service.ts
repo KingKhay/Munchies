@@ -96,7 +96,7 @@ export class FoodService {
         name: 'Mini Smoothie',
         price: 7,
         tags: ['FastFood','Smoothie'],
-        favorite: false,
+        favorite: true,
         cookTime: '5 mins',
         imageUrl: 'assets/images/menu9.jpg',
         stars: 5

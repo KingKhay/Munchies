@@ -10,6 +10,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuCardComponent } from './components/menu/menu-card/menu-card.component';
 import {RatingModule} from "ng-starrating";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 const components = [
   HeaderComponent,
@@ -31,6 +32,7 @@ const components = [
     MaterialModule,
     HttpClientModule,
     RatingModule,
+    MatProgressSpinnerModule,
   ],
   exports: [
     components
