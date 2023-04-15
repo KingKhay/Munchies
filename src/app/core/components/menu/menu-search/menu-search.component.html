@@ -1,1 +1,4 @@
-<p>menu-search works!</p>
+<div>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search for meal" class="w-64 bg-gray-100 p-3 rounded-l-xl outline-0">
+  <button (click)="search()" class="bg-yellow-500 p-3 rounded-r-xl hover:bg-amber-400 text-white">Search</button>
+</div>
