@@ -19,5 +19,6 @@ export class MenuSearchComponent {
       this.router.navigateByUrl('/menu')
     }
     this.router.navigateByUrl(`/search/${this.searchTerm}`);
+    this.searchTerm = '';
   }
 }
