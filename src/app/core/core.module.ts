@@ -11,6 +11,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuCardComponent } from './components/menu/menu-card/menu-card.component';
 import {RatingModule} from "ng-starrating";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { MenuSearchComponent } from './components/menu/menu-search/menu-search.component';
+import {FormsModule} from "@angular/forms";
+import { MenuTagComponent } from './components/menu/menu-tag/menu-tag.component';
 
 const components = [
   HeaderComponent,
@@ -19,11 +22,14 @@ const components = [
   ErrorComponent,
   MenuComponent,
   MenuCardComponent,
+  MenuSearchComponent,
 ];
 
 @NgModule({
   declarations: [
-    components
+    components,
+    MenuTagComponent,
+
   ],
   imports: [
     CommonModule,
@@ -33,6 +39,7 @@ const components = [
     HttpClientModule,
     RatingModule,
     MatProgressSpinnerModule,
+    FormsModule,
   ],
   exports: [
     components

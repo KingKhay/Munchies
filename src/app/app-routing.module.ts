@@ -7,6 +7,10 @@ import {MenuComponent} from "./core/components/menu/menu.component";
 const routes: Routes = [
   {path: '', component: HeroComponent},
   {path: 'menu', component: MenuComponent},
+  {path: 'search', component: MenuComponent},
+  {path: 'search/:searchTerm', component: MenuComponent},
+  {path: 'tag', component: MenuComponent},
+  {path: 'tag/:tagName', component: MenuComponent},
   {path: '**', component: ErrorComponent}
 ];
 

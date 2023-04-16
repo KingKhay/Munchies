@@ -17,7 +17,7 @@ export class FoodService {
         price: 34,
         tags: ['Veggies','FastFood'],
         favorite: true,
-        cookTime: '10 mins',
+        cookTime: '5-10',
         imageUrl: 'assets/images/menu1.jpg',
         stars: 4
       },
@@ -27,7 +27,7 @@ export class FoodService {
         price: 37,
         tags: ['Veggies','FastFood'],
         favorite: false,
-        cookTime: '10 mins',
+        cookTime: '5-10',
         imageUrl: 'assets/images/menu2.jpg',
         stars: 3
       },
@@ -37,7 +37,7 @@ export class FoodService {
         price: 25,
         tags: ['Noodles','FastFood'],
         favorite: true,
-        cookTime: '15 mins',
+        cookTime: '10-15',
         imageUrl: 'assets/images/menu3.jpg',
         stars: 4
       },
@@ -45,9 +45,9 @@ export class FoodService {
         id: 'bdd28129-c289-445f-a052-9e106c424252',
         name: 'He Fen',
         price: 27,
-        tags: ['Noodles','FastFood'],
+        tags: ['Noodles','SlowFood'],
         favorite: true,
-        cookTime: '15 mins',
+        cookTime: '15-20',
         imageUrl: 'assets/images/menu4.jpg',
         stars: 4
       },
@@ -57,7 +57,7 @@ export class FoodService {
         price: 42,
         tags: ['Noodles','SlowFood'],
         favorite: true,
-        cookTime: '25 mins',
+        cookTime: '20-25',
         imageUrl: 'assets/images/menu5.jpg',
         stars: 4
       },
@@ -67,7 +67,7 @@ export class FoodService {
         price: 20,
         tags: ['Noodles','SlowFood'],
         favorite: false,
-        cookTime: '25 mins',
+        cookTime: '20-25',
         imageUrl: 'assets/images/menu6.jpg',
         stars: 3
       },
@@ -77,7 +77,7 @@ export class FoodService {
         price: 23,
         tags: ['Veggies','FastFood'],
         favorite: true,
-        cookTime: '10 mins',
+        cookTime: '5-10',
         imageUrl: 'assets/images/menu7.jpg',
         stars: 2
       },
@@ -87,7 +87,7 @@ export class FoodService {
         price: 18,
         tags: ['Fries','FastFood','Burger'],
         favorite: false,
-        cookTime: '10 mins',
+        cookTime: '5-10',
         imageUrl: 'assets/images/menu8.jpg',
         stars: 5
       },
@@ -97,7 +97,7 @@ export class FoodService {
         price: 7,
         tags: ['FastFood','Smoothie'],
         favorite: true,
-        cookTime: '5 mins',
+        cookTime: '1-5',
         imageUrl: 'assets/images/menu9.jpg',
         stars: 5
       },
@@ -107,7 +107,7 @@ export class FoodService {
         price: 9,
         tags: ['FastFood','Smoothie'],
         favorite: false,
-        cookTime: '5 mins',
+        cookTime: '1-5',
         imageUrl: 'assets/images/menu10.jpg',
         stars: 5
       },
@@ -117,7 +117,7 @@ export class FoodService {
         price: 8,
         tags: ['FastFood','Smoothie'],
         favorite: false,
-        cookTime: '5 mins',
+        cookTime: '1-5',
         imageUrl: 'assets/images/menu11.jpg',
         stars: 4
       },
@@ -127,7 +127,7 @@ export class FoodService {
         price: 21,
         tags: ['FastFood','Burger'],
         favorite: true,
-        cookTime: '10 mins',
+        cookTime: '5-10',
         imageUrl: 'assets/images/menu12.jpg',
         stars: 5
       },
@@ -137,7 +137,7 @@ export class FoodService {
         price: 20,
         tags: ['FastFood','Burger', 'Fries'],
         favorite: true,
-        cookTime: '15 mins',
+        cookTime: '10-15',
         imageUrl: 'assets/images/menu13.jpg',
         stars: 4
       },
@@ -147,7 +147,7 @@ export class FoodService {
         price: 24,
         tags: ['FastFood','Burger','Fries'],
         favorite: false,
-        cookTime: '15 mins',
+        cookTime: '10-15',
         imageUrl: 'assets/images/menu14.jpg',
         stars: 5
       },
