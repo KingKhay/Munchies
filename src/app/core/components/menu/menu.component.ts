@@ -26,11 +26,14 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      if (params.get('searchTerm')) {
+      if (params.has('searchTerm')) {
         this.foodData =
           this.foodService.getMenuOfFood()
             .filter(food => food.name.toLowerCase()
               .includes(params.get('searchTerm')!.toLowerCase()));
+        if(this.foodData.length < 1){
+          //Handle the No such Food Component
+        }
       }
       else{
         this.foodData = this.foodService.getMenuOfFood()
