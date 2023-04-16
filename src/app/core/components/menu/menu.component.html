@@ -2,6 +2,7 @@
   <mat-icon *ngIf="isLoading" class="scale-[10] md:mt-52" svgIcon="spinner"></mat-icon>
   <div *ngIf="!isLoading" class="flex flex-col justify-center items-center">
     <app-menu-search></app-menu-search>
+    <app-menu-tag></app-menu-tag>
     <div class="mt-10 flex flex-row justify-center items-center flex-wrap">
       <app-menu-card [food]="food" *ngFor="let food of foodData"></app-menu-card>
     </div>

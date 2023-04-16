@@ -35,6 +35,15 @@ export class MenuComponent implements OnInit {
           //Handle the No such Food Component
         }
       }
+      else if(params.has('tagName')){
+        if(params.get('tagName') === 'All'){
+          this.foodData = this.foodService.getMenuOfFood();
+        }
+        else{
+          this.foodData = this.foodService.getMenuOfFood()
+            .filter(food => food.tags.includes(params.get('tagName')!));
+        }
+      }
       else{
         this.foodData = this.foodService.getMenuOfFood()
       }
