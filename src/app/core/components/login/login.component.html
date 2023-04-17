@@ -1,1 +1,12 @@
-<p>login works!</p>
+<div class="w-full mt-10 flex flex-col items-center justify-center">
+  <p class="mb-10 text-3xl text-yellow-400">Login</p>
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class="flex flex-col items-center justify-center border border-black h-96 w-3/5 rounded-xl">
+    <div class="mb-16">
+      <input type="text" id="username" name="username" placeholder="username" formControlName="username" class="h-12 w-80 rounded-xl outline-0 text-xl bg-gray-300 p-2">
+    </div>
+    <div>
+      <input type="password" id="password" name="password" placeholder="password" formControlName="password" class="h-12 w-80 rounded-xl outline-0 text-xl bg-gray-300 p-2">
+    </div>
+    <button type="submit" [disabled]="loginForm.invalid" class="py-2 px-7 bg-amber-400 rounded-xl cursor-pointer mt-3">Login</button>
+  </form>
+</div>
