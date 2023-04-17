@@ -14,6 +14,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { MenuSearchComponent } from './components/menu/menu-search/menu-search.component';
 import {FormsModule} from "@angular/forms";
 import { MenuTagComponent } from './components/menu/menu-tag/menu-tag.component';
+import {ToastrModule} from "ngx-toastr";
 
 const components = [
   HeaderComponent,
@@ -40,6 +41,7 @@ const components = [
     RatingModule,
     MatProgressSpinnerModule,
     FormsModule,
+    ToastrModule,
   ],
   exports: [
     components
