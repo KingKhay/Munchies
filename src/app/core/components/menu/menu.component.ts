@@ -33,6 +33,7 @@ export class MenuComponent implements OnInit {
               .includes(params.get('searchTerm')!.toLowerCase()));
         if(this.foodData.length < 1){
           //Handle the No such Food Component
+
         }
       }
       else if(params.has('tagName')){
