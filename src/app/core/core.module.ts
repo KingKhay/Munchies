@@ -12,9 +12,10 @@ import { MenuCardComponent } from './components/menu/menu-card/menu-card.compone
 import {RatingModule} from "ng-starrating";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { MenuSearchComponent } from './components/menu/menu-search/menu-search.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MenuTagComponent } from './components/menu/menu-tag/menu-tag.component';
 import {ToastrModule} from "ngx-toastr";
+import { LoginComponent } from './components/login/login.component';
 
 const components = [
   HeaderComponent,
@@ -24,12 +25,13 @@ const components = [
   MenuComponent,
   MenuCardComponent,
   MenuSearchComponent,
+  MenuTagComponent,
+  LoginComponent,
 ];
 
 @NgModule({
   declarations: [
     components,
-    MenuTagComponent,
 
   ],
   imports: [
@@ -42,6 +44,7 @@ const components = [
     MatProgressSpinnerModule,
     FormsModule,
     ToastrModule,
+    ReactiveFormsModule,
   ],
   exports: [
     components
