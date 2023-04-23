@@ -3,6 +3,9 @@
   <div *ngIf="!isLoading" class="flex flex-col justify-center items-center">
     <app-menu-search></app-menu-search>
     <app-menu-tag></app-menu-tag>
+    <div *ngIf="noSuchFood">
+      <a href="#" class="py-2 px-5 bg-amber-400 text-white">No Such Food...</a>
+    </div>
     <div class="mt-10 flex flex-row justify-center items-center flex-wrap">
       <app-menu-card [food]="food" *ngFor="let food of foodData"></app-menu-card>
     </div>

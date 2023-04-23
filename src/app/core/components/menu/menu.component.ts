@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {FoodService} from "../../services/food.service";
 import {Food} from "../../../shared/models/Food";
 import {MatIconRegistry} from "@angular/material/icon";
@@ -16,6 +16,8 @@ export class MenuComponent implements OnInit {
 
   isLoading = true;
 
+  noSuchFood: boolean = false;
+
   constructor(private foodService: FoodService,
               private matIconRegistry: MatIconRegistry,
               private domSanitizer: DomSanitizer,
@@ -23,6 +25,7 @@ export class MenuComponent implements OnInit {
     this.matIconRegistry.addSvgIcon('spinner', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/spinner.svg'));
 
   }
+
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -33,7 +36,7 @@ export class MenuComponent implements OnInit {
               .includes(params.get('searchTerm')!.toLowerCase()));
         if(this.foodData.length < 1){
           //Handle the No such Food Component
-
+          this.noSuchFood = true;
         }
       }
       else if(params.has('tagName')){
@@ -51,5 +54,6 @@ export class MenuComponent implements OnInit {
       this.isLoading = false;
     })
   }
+
 
 }
