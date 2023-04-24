@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FoodService} from "../../services/food.service";
 import {Food} from "../../../shared/models/Food";
 import {MatIconRegistry} from "@angular/material/icon";
@@ -26,7 +26,6 @@ export class MenuComponent implements OnInit {
 
   }
 
-
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       if (params.has('searchTerm')) {
@@ -34,10 +33,7 @@ export class MenuComponent implements OnInit {
           this.foodService.getMenuOfFood()
             .filter(food => food.name.toLowerCase()
               .includes(params.get('searchTerm')!.toLowerCase()));
-        if(this.foodData.length < 1){
-          //Handle the No such Food Component
-          this.noSuchFood = true;
-        }
+        this.noSuchFood = this.foodData.length < 1;
       }
       else if(params.has('tagName')){
         if(params.get('tagName') === 'All'){
