@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MenuTagComponent } from './components/menu/menu-tag/menu-tag.component';
 import {ToastrModule} from "ngx-toastr";
 import { LoginComponent } from './components/login/login.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 const components = [
   HeaderComponent,
@@ -27,6 +28,7 @@ const components = [
   MenuSearchComponent,
   MenuTagComponent,
   LoginComponent,
+  BlogComponent,
 ];
 
 @NgModule({
